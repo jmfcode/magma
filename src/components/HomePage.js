@@ -7,6 +7,8 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import SignupForm from "./SignupForm";
+import SignupFormMui from "./SignupFormMui";
 
 async function getAccount() {
   window.ethereum
@@ -28,7 +30,7 @@ const HomePage = () => {
   return (
     <Fragment>
       <MobileNavBar color="primary" auth={auth} accountName={account} />
-      <JmfContainer bgcolor="primary.main" overflow="hidden">
+      <JmfContainer bgcolor="primary.main">
         <Container
           maxWidth="md"
           sx={{
@@ -80,6 +82,19 @@ const HomePage = () => {
               </ButtonGroup>
             </Box>
           </Box>
+        </Container>
+
+        <Container
+          maxWidth="md"
+          sx={{
+            bgcolor: "secondary.main",
+            paddingTop: 10,
+            paddingBottom: 10,
+            borderRadius: 2,
+            mt: 10,
+          }}
+        >
+          <SignupForm />
         </Container>
       </JmfContainer>
     </Fragment>

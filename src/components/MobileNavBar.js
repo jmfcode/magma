@@ -2,23 +2,14 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+import NavMenu from "./NavMenu";
 
 export default function ButtonAppBar({ auth, accountName, ...props }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" elevation={0} {...props}>
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
+          <NavMenu />
           <Box
             sx={{
               display: "flex",
@@ -26,7 +17,7 @@ export default function ButtonAppBar({ auth, accountName, ...props }) {
               flexDirection: "row-reverse",
             }}
           >
-            {auth && (
+            {!!auth && (
               <Typography noWrap>
                 {accountName.slice(0, 4) + "..." + accountName.slice(-4)}
               </Typography>

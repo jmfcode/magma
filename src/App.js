@@ -1,31 +1,52 @@
 import * as React from "react";
 import HomePage from "./components/HomePage";
+import BlogPage from "./components/BlogPage";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //primary: main background color, secondary is container color, info is
 //the CTA color
 
 const theme = createTheme({
   palette: {
-    type: "dark",
+    type: "light",
     primary: {
-      main: "#E5E6E4",
+      main: "#1e0404",
     },
     secondary: {
-      main: "#CFD2CD",
+      main: "#2d0707",
     },
     info: {
-      main: "#FBFBF2",
+      main: "#db3737",
+    },
+    text: {
+      primary: "#ffffff",
+      secondary: "#00000",
     },
   },
 });
 
-function App() {
+export default function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <HomePage />
-    </ThemeProvider>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <ThemeProvider theme={theme}>
+              <HomePage />
+            </ThemeProvider>
+          }
+        />
+        <Route
+          path="/blog"
+          element={
+            <ThemeProvider theme={theme}>
+              <BlogPage />
+            </ThemeProvider>
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
