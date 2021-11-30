@@ -4,6 +4,10 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
+import { Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Paper from "@mui/material/Paper";
 
 export default function NavMenu() {
   const navigate = useNavigate();
@@ -35,6 +39,7 @@ export default function NavMenu() {
       >
         <MenuIcon />
       </IconButton>
+
       <Menu
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
@@ -42,9 +47,19 @@ export default function NavMenu() {
         open={open}
         onClose={handleClose}
       >
-        <MenuItem onClick={navToHome}>Home</MenuItem>
+        <Box minWidth={250} maxWidth={350}>
+          <MenuItem onClick={navToHome}>
+            <Typography color="#000">Home</Typography>
+          </MenuItem>
+        </Box>
 
-        <MenuItem onClick={navToBlog}>Blog</MenuItem>
+        <Divider />
+
+        <Box minWidth={250} maxWidth={350}>
+          <MenuItem onClick={navToBlog}>
+            <Typography color="#000">Blog</Typography>
+          </MenuItem>
+        </Box>
       </Menu>
     </div>
   );

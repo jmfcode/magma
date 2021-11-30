@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import SignupForm from "./SignupForm";
+import placeholder from "../img/placeholder.png";
 
 async function getAccount() {
   window.ethereum
@@ -79,6 +80,72 @@ const HomePage = () => {
                   Connect Wallet
                 </Button>
               </ButtonGroup>
+            </Box>
+          </Box>
+        </Container>
+
+        <Container
+          maxWidth="md"
+          sx={{
+            bgcolor: "secondary.main",
+            paddingTop: 10,
+            paddingBottom: 10,
+            borderRadius: 2,
+            mt: 10,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Box>
+            <Typography variant="h3" fontWeight="bold" color="#FFF">
+              Magma is a crypto tool
+            </Typography>
+
+            <Typography variant="body1" color="#FFFFFF" mt={2} maxWidth={450}>
+              Sed eget tellus enim. Ut tempor est neque, vel facilisis risus
+              mollis vitae. Proin vel felis ut nulla elementum pharetra laoreet
+              sit amet ipsum.
+            </Typography>
+
+            <Box mt={2}>
+              <img src={placeholder} alt="placeholder alt" width={350} />
+            </Box>
+          </Box>
+
+          <Box display="flex" flexDirection="row-reverse" mt={10}>
+            <Box display="flex" flexDirection="column" alignItems="flex-end">
+              <Typography variant="h3" fontWeight="bold" color="#FFF">
+                Which does next level things.
+              </Typography>
+              <Typography variant="body1" color="#FFFFFF" mt={2} maxWidth={450}>
+                Sed eget tellus enim. Ut tempor est neque, vel facilisis risus
+                mollis vitae. Proin vel felis ut nulla elementum pharetra
+                laoreet sit amet ipsum.
+              </Typography>
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="flex-end"
+                mt={2}
+              >
+                <img src={placeholder} alt="placeholder alt" width={350} />
+              </Box>
+            </Box>
+          </Box>
+
+          <Box mt={10}>
+            <Typography variant="h3" fontWeight="bold" color="#FFF">
+              Are you ready to take control?
+            </Typography>
+
+            <Typography variant="body1" color="#FFFFFF" mt={2} maxWidth={450}>
+              Sed eget tellus enim. Ut tempor est neque, vel facilisis risus
+              mollis vitae.
+            </Typography>
+
+            <Box mt={2}>
+              <img src={placeholder} alt="placeholder alt" width={350} />
             </Box>
           </Box>
         </Container>
