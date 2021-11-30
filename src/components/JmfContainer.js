@@ -2,7 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 
 const JmfContainer = (props) => (
-  <Box {...props} sx={{ height: "100vh" }}>
+  <Box {...props} display="flex" flexDirection="column">
     {props.children}
   </Box>
 );

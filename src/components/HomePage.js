@@ -8,7 +8,6 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import SignupForm from "./SignupForm";
-import SignupFormMui from "./SignupFormMui";
 
 async function getAccount() {
   window.ethereum
@@ -92,9 +91,21 @@ const HomePage = () => {
             paddingBottom: 10,
             borderRadius: 2,
             mt: 10,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          <SignupForm />
+          <Box display="flex" flexDirection="column">
+            <Typography variant="h4" fontWeight="bold" color="#FFFFFF">
+              Join the waitlist
+            </Typography>
+            <Typography variant="body1" color="#FFFFFF" mt={1} maxWidth={400}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              ultricies semper aliquet.
+            </Typography>
+            <SignupForm />
+          </Box>
         </Container>
       </JmfContainer>
     </Fragment>
