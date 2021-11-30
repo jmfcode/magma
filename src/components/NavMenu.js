@@ -11,8 +11,10 @@ import Paper from "@mui/material/Paper";
 
 export default function NavMenu() {
   const navigate = useNavigate();
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -22,6 +24,8 @@ export default function NavMenu() {
 
   const navToBlog = () => navigate("/blog");
   const navToHome = () => navigate("/");
+
+  const showBlog = false;
 
   return (
     <div>
@@ -55,11 +59,13 @@ export default function NavMenu() {
 
         <Divider />
 
-        <Box minWidth={250} maxWidth={350}>
-          <MenuItem onClick={navToBlog}>
-            <Typography color="#000">Blog</Typography>
-          </MenuItem>
-        </Box>
+        {showBlog && (
+          <Box minWidth={250} maxWidth={350}>
+            <MenuItem onClick={navToBlog}>
+              <Typography color="#000">Blog</Typography>
+            </MenuItem>
+          </Box>
+        )}
       </Menu>
     </div>
   );

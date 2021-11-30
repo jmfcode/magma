@@ -158,6 +158,7 @@ const HomePage = () => {
             paddingBottom: 10,
             borderRadius: 2,
             mt: 10,
+            mb: 10,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
