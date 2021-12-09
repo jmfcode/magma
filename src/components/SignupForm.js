@@ -41,7 +41,7 @@ export default function Signup() {
                   name="EMAIL"
                   className="email"
                   id="mce-EMAIL"
-                  style={{ outline: "2px solid #db3737", height: 51 }}
+                  style={{ outline: "2px solid #256EFF", height: 51 }}
                   placeholder="Email Address"
                   required
                 />
@@ -53,7 +53,7 @@ export default function Signup() {
                     padding: 0,
                     cursor: "pointer",
                     outline: "inherit",
-                    backgroundColor: "#db3737",
+                    backgroundColor: "#256EFF",
                     color: "#FFF",
                     marginLeft: 10,
                     padding: 20,

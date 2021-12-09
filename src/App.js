@@ -1,6 +1,7 @@
 import * as React from "react";
 import HomePage from "./components/HomePage";
 import BlogPage from "./components/BlogPage";
+import BlogPost from "./components/BlogPost";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -11,17 +12,18 @@ const theme = createTheme({
   palette: {
     type: "light",
     primary: {
-      main: "#1e0404",
+      main: "#FFFFFF",
     },
     secondary: {
-      main: "#2d0707",
+      main: "#EBF6FE",
     },
     info: {
-      main: "#db3737",
+      main: "#256EFF",
     },
     text: {
-      primary: "#ffffff",
-      secondary: "#00000",
+      primary: "#000000",
+      secondary: "#FFFFFF",
+      sub: "#666666",
     },
   },
 });
@@ -43,6 +45,14 @@ export default function App() {
           element={
             <ThemeProvider theme={theme}>
               <BlogPage />
+            </ThemeProvider>
+          }
+        />
+        <Route
+          path="/blog/what-is-ideaDAO"
+          element={
+            <ThemeProvider theme={theme}>
+              <BlogPost />
             </ThemeProvider>
           }
         />
