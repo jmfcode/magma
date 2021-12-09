@@ -31,7 +31,12 @@ const BlogPage = () => {
     <Fragment>
       <MobileNavBar color="primary" />
       <JmfContainer bgcolor="primary.main">
-        <Typography variant="h1" fontWeight="bold" marginBottom={5}>
+        <Typography
+          variant="h1"
+          fontWeight="bold"
+          marginBottom={5}
+          marginLeft="10%"
+        >
           Blog
         </Typography>
 
@@ -47,7 +52,13 @@ const BlogPage = () => {
               alignItems: "center",
             }}
           >
-            <Box display="flex" width="498px" height="350px" bgcolor="#000">
+            <Box
+              display="flex"
+              width="498px"
+              height="350px"
+              bgcolor="#000"
+              borderRadius={2}
+            >
               Blog cover image
             </Box>
 
@@ -57,6 +68,7 @@ const BlogPage = () => {
               justifyContent="center"
               width="450px"
               padding={3}
+              borderRadius={2}
               bgcolor="secondary.main"
             >
               <Typography color="text.sub"> 12/09/2021</Typography>
