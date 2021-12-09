@@ -9,7 +9,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import SignupForm from "./SignupForm";
-import placeholder from "../img/placeholder.png";
+import Paper from "@mui/material/Paper";
 
 async function getAccount() {
   window.ethereum
@@ -37,22 +37,19 @@ const HomePage = () => {
         <Container
           maxWidth="lg"
           sx={{
-            bgcolor: "secondary.main",
+            bgcolor: "#FFFFFF",
             borderRadius: 2,
             paddingTop: 10,
             paddingBottom: 10,
           }}
         >
           <Typography variant="h1" fontWeight="bold" color="#000000">
-            We're building the future
+            We're solving NFT intellectual property on the blockchain
           </Typography>
 
-          <Typography variant="body1" color="#000000" mt={1}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            ultricies semper aliquet. Sed eget tellus enim. Ut tempor est neque,
-            vel facilisis risus mollis vitae. Proin vel felis ut nulla elementum
-            pharetra laoreet sit amet ipsum. Aliquam at posuere orci, in
-            fringilla erat. Nam congue placerat sollicitudin.
+          <Typography variant="body1" color="#000000" mt={5} maxWidth={850}>
+            IdeaLog is a DAO that aims at organizing the blockchains data to
+            enable competition but allow inspiration. We're starting with NFTs.
           </Typography>
 
           <Box
@@ -89,96 +86,37 @@ const HomePage = () => {
           </Box>
         </Container>
 
-        <Container
-          maxWidth="lg"
-          sx={{
-            bgcolor: "secondary.main",
-            paddingTop: 10,
-            paddingBottom: 10,
-            borderRadius: 2,
-            mt: 10,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <Box>
-            <Typography variant="h2" fontWeight="bold" color="#000000">
-              Aliquet bibendum enim facilisis
-            </Typography>
-
-            <Typography variant="body1" color="#000000" mt={2} maxWidth={450}>
-              Sed eget tellus enim. Ut tempor est neque, vel facilisis risus
-              mollis vitae. Proin vel felis ut nulla elementum pharetra laoreet
-              sit amet ipsum.
-            </Typography>
-
-            <Box mt={2}>
-              <img src={placeholder} alt="placeholder alt" width={350} />
-            </Box>
-          </Box>
-
-          <Box display="flex" flexDirection="row-reverse" mt={10}>
-            <Box display="flex" flexDirection="column" alignItems="flex-end">
-              <Typography variant="h2" fontWeight="bold" color="#000000">
-                Elementum pulvinar etiam non
+        <Container maxWidth="lg">
+          <Paper
+            variant="outlined"
+            sx={{
+              bgcolor: "secondary.main",
+              paddingTop: 10,
+              paddingBottom: 10,
+              borderRadius: 2,
+              mt: 5,
+              mb: 10,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <Box display="flex" flexDirection="column">
+              <Typography variant="h3" fontWeight="bold" color="#000000">
+                Join the waitlist
               </Typography>
-              <Typography variant="body1" color="#000000" mt={2} maxWidth={450}>
-                Sed eget tellus enim. Ut tempor est neque, vel facilisis risus
-                mollis vitae. Proin vel felis ut nulla elementum pharetra
-                laoreet sit amet ipsum.
-              </Typography>
-              <Box
-                display="flex"
-                flexDirection="column"
-                alignItems="flex-end"
-                mt={2}
+              <Typography
+                variant="body1"
+                ccolor="#000000"
+                mt={1}
+                maxWidth={400}
               >
-                <img src={placeholder} alt="placeholder alt" width={350} />
-              </Box>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                ultricies semper aliquet.
+              </Typography>
+              <SignupForm />
             </Box>
-          </Box>
-
-          <Box mt={10}>
-            <Typography variant="h2" fontWeight="bold" color="#000000">
-              At quis risus sed vulputate odio
-            </Typography>
-
-            <Typography variant="body1" color="#000000" mt={2} maxWidth={450}>
-              Sed eget tellus enim. Ut tempor est neque, vel facilisis risus
-              mollis vitae.
-            </Typography>
-
-            <Box mt={2}>
-              <img src={placeholder} alt="placeholder alt" width={350} />
-            </Box>
-          </Box>
-        </Container>
-
-        <Container
-          maxWidth="lg"
-          sx={{
-            bgcolor: "secondary.main",
-            paddingTop: 10,
-            paddingBottom: 10,
-            borderRadius: 2,
-            mt: 10,
-            mb: 10,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <Box display="flex" flexDirection="column">
-            <Typography variant="h3" fontWeight="bold" color="#000000">
-              Join the waitlist
-            </Typography>
-            <Typography variant="body1" ccolor="#000000" mt={1} maxWidth={400}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              ultricies semper aliquet.
-            </Typography>
-            <SignupForm />
-          </Box>
+          </Paper>
         </Container>
       </JmfContainer>
     </Fragment>

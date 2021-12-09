@@ -39,7 +39,7 @@ const BlogPage = () => {
           <Container
             maxWidth="lg"
             sx={{
-              bgcolor: "secondary.main",
+              bgcolor: "#FFFFFF",
               height: "550px",
               padding: isMobile ? 5 : 10,
               display: "flex",
@@ -57,7 +57,7 @@ const BlogPage = () => {
               justifyContent="center"
               width="450px"
               padding={3}
-              bgcolor="#FFF"
+              bgcolor="secondary.main"
             >
               <Typography color="text.sub"> 12/09/2021</Typography>
               <Typography variant="body1" fontWeight="bold">

@@ -16,9 +16,12 @@ export default function BlogPost({ content }) {
         </Typography>
 
         <Typography variant="body1" mt={5}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor
-          condimentum lacinia quis vel eros donec. Suspendisse interdum
+          For many collectors, originality of an idea is one of the most
+          important factors in their valuation of a project. Currently, there
+          are two ways for you to be aware of an idea. until it is on the
+          blockchain. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Tortor condimentum lacinia quis vel eros donec. Suspendisse interdum
           consectetur libero id faucibus. Suspendisse ultrices gravida dictum
           fusce. Semper auctor neque vitae tempus. Morbi tristique senectus et
           netus. Pellentesque dignissim enim sit amet venenatis urna cursus
